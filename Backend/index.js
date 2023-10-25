@@ -9,10 +9,10 @@ MongoConn();
 
 app.use(cors(
   {
-    origin:["https://food-delivery-mern-stack.vercel.app/"],
+    origin:["https://food-delivery-mern-stack.vercel.app"],
     methods:["POST","GET"],
     credentials:true
-  }
+  } 
 ))
 // app.use((req,res,next)=>
 // {
