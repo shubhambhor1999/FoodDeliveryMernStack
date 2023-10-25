@@ -1,6 +1,6 @@
 const mongoose=require("mongoose");
 
-const mongourl="mongodb+srv://FoodDelivery:pass@cluster0.i45lvec.mongodb.net/FoodDeliveryMern?retryWrites=true&w=majority"
+const mongourl="mongodb+srv://FoodDelivery:Food1234@cluster0.i45lvec.mongodb.net/FoodDeliveryMern?retryWrites=true&w=majority"
 const MongoConn=async()=>{
 try{
     await mongoose.connect(mongourl,{useNewUrlParser:true});
