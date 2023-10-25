@@ -2,7 +2,7 @@ const express=require("express");
 const MongoConn =require("./db.js");
 const cors=require('cors')
 
-const app = expcdress();
+const app = express();
 const port = process.env.PORT || 5000;
 
 MongoConn();
