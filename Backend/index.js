@@ -27,8 +27,8 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
-app.use('/api',require("./Routes/CreateUser.js"));
 app.use('/api',require("./Routes/DisplayData.js"));
+app.use('/api',require("./Routes/CreateUser.js"));
 app.use('/api',require("./Routes/OrderData.js"));
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
