@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Cards from '../components/Cards'
+import Spinner from '../components/Spinner';
 // import Carousel from '../components/Carousel'
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
   const [foodItem, setFoodItem] = useState([]);
   const [foodCat, setFoodCat] = useState([]);
   const [search,setSearch]=useState('');
-
+  const [loading,setLoading]=useState(false);
   const loadData = async () => {
     let response = await fetch("https://food-delivery-six-khaki.vercel.app/api/foodData", {
       method: "POST",
@@ -26,6 +27,10 @@ export default function Home() {
     loadData()
   }, [])
   return (
+<>
+    {
+      !loading ? <Spinner/>:
+      <>
     <div>
       <div><Header /></div>
       <div>
@@ -89,5 +94,7 @@ export default function Home() {
       </div>
       <div><Footer /></div>
     </div>
+    </>}
+    </>
   )
 }
