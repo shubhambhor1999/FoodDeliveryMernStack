@@ -21,10 +21,15 @@ export default function Home() {
     response = await response.json();
     setFoodItem(response[0]);
     setFoodCat(response[1]);
+    setLoading(true);
   }
 
   useEffect(() => {
     loadData()
+    .catch((error)=>{
+      console.log(error);
+      setLoading(false);
+    })
   }, [])
   return (
 <>
